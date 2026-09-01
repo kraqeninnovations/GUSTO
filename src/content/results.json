@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "sectionLabel": "RACE RESULTS & STANDINGS",
+    "title": {
+      "line1": "SEASON",
+      "line2": "RESULTS"
+    },
+    "subtitle": "Official race standings, qualifying lap times, practice metrics, and championship results across international circuits.",
+    "championshipName": "2026 ESBK Race Calendar"
+  },
+  "events": [
+    {
+      "id": "round-1",
+      "round": "ROUND 1",
+      "title": "Circuito de Navarra",
+      "circuit": "Circuito de Navarra",
+      "location": "Los Arcos",
+      "country": "Spain",
+      "flag": "🇪🇸",
+      "date": "07–10 May",
+      "image": "/result/260618-ESB-ES-40768.jpeg",
+      "championship": "ESBK 2026",
+      "championshipLogoText": "ESBK",
+      "result": "COMPLETE",
+      "position": "P1",
+      "points": "25 PTS",
+      "badge": "✅ Complete",
+      "status": "complete",
+      "categories": [
+        { "name": "Free Practice", "link": "#" },
+        { "name": "Qualifying", "link": "#", "hasLaptime": true },
+        { "name": "Race 1", "link": "#", "hasLaptime": true },
+        { "name": "Race 2", "link": "#", "hasLaptime": true }
+      ]
+    },
+    {
+      "id": "round-2",
+      "round": "ROUND 2",
+      "title": "Circuito do Estoril",
+      "circuit": "Circuito do Estoril",
+      "location": "Estoril",
+      "country": "Portugal",
+      "flag": "🇵🇹",
+      "date": "18–21 June",
+      "image": "/result/IMG_3500.JPG",
+      "championship": "ESBK 2026",
+      "championshipLogoText": "ESBK",
+      "result": "COMPLETE",
+      "position": "P1",
+      "points": "25 PTS",
+      "badge": "✅ Complete",
+      "status": "complete",
+      "categories": [
+        { "name": "Free Practice", "link": "#" },
+        { "name": "Qualifying", "link": "#", "hasLaptime": true },
+        { "name": "Race 1", "link": "#", "hasLaptime": true },
+        { "name": "Race 2", "link": "#", "hasLaptime": true }
+      ]
+    },
+    {
+      "id": "round-3",
+      "round": "ROUND 3",
+      "title": "MotorLand Aragón",
+      "circuit": "MotorLand Aragón",
+      "location": "Alcañiz",
+      "country": "Spain",
+      "flag": "🇪🇸",
+      "date": "16–19 July",
+      "image": "/result/IMG_3493.JPG",
+      "championship": "ESBK 2026",
+      "championshipLogoText": "ESBK",
+      "result": "COMPLETE",
+      "position": "P1",
+      "points": "25 PTS",
+      "badge": "✅ Complete",
+      "status": "complete",
+      "categories": [
+        { "name": "Free Practice", "link": "#" },
+        { "name": "Qualifying", "link": "#", "hasLaptime": true },
+        { "name": "Race 1", "link": "#", "hasLaptime": true },
+        { "name": "Race 2", "link": "#", "hasLaptime": true }
+      ]
+    },
+    {
+      "id": "round-4",
+      "round": "ROUND 4",
+      "title": "Circuit Ricardo Tormo",
+      "circuit": "Circuit Ricardo Tormo",
+      "location": "Valencia",
+      "country": "Spain",
+      "flag": "🇪🇸",
+      "date": "10–13 September",
+      "image": "/result/IMG_4051.JPG",
+      "championship": "ESBK 2026",
+      "championshipLogoText": "ESBK",
+      "result": "UPCOMING",
+      "position": "—",
+      "points": "0 PTS",
+      "badge": "🕒 Upcoming",
+      "status": "upcoming",
+      "categories": [
+        { "name": "Free Practice", "link": "#" },
+        { "name": "Qualifying", "link": "#", "hasLaptime": true },
+        { "name": "Race 1", "link": "#", "hasLaptime": true },
+        { "name": "Race 2", "link": "#", "hasLaptime": true }
+      ]
+    },
+    {
+      "id": "round-5",
+      "round": "ROUND 5",
+      "title": "Circuito de Navarra II",
+      "circuit": "Circuito de Navarra II",
+      "location": "Los Arcos",
+      "country": "Spain",
+      "flag": "🇪🇸",
+      "date": "17–20 September",
+      "image": "/result/IMG_4093.JPG",
+      "championship": "ESBK 2026",
+      "championshipLogoText": "ESBK",
+      "result": "UPCOMING",
+      "position": "—",
+      "points": "0 PTS",
+      "badge": "🕒 Upcoming",
+      "status": "upcoming",
+      "categories": [
+        { "name": "Free Practice", "link": "#" },
+        { "name": "Qualifying", "link": "#", "hasLaptime": true },
+        { "name": "Race 1", "link": "#", "hasLaptime": true },
+        { "name": "Race 2", "link": "#", "hasLaptime": true }
+      ]
+    },
+    {
+      "id": "round-6",
+      "round": "ROUND 6 (FINALE)",
+      "title": "Circuito de Jerez Ángel Nieto II",
+      "circuit": "Circuito de Jerez Ángel Nieto II",
+      "location": "Jerez de la Frontera",
+      "country": "Spain",
+      "flag": "🇪🇸",
+      "date": "29 October – 01 November",
+      "image": "/result/IMG_3549.JPG",
+      "championship": "ESBK 2026",
+      "championshipLogoText": "ESBK",
+      "result": "FINALE",
+      "position": "—",
+      "points": "0 PTS",
+      "badge": "🏆 Finale",
+      "status": "finale",
+      "categories": [
+        { "name": "Free Practice", "link": "#" },
+        { "name": "Qualifying", "link": "#", "hasLaptime": true },
+        { "name": "Race 1", "link": "#", "hasLaptime": true },
+        { "name": "Race 2", "link": "#", "hasLaptime": true }
+      ]
+    },
+    {
+      "id": "coming-soon",
+      "type": "placeholder",
+      "title": "COMING SOON",
+      "description": "New Race Update Coming Soon"
+    }
+  ],
+  "previousResults": {
+    "paragraph": "Looking for archive data from past seasons?",
+    "buttonText": "View Previous Seasons Archive"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "logo": "/johi-logo.png",
+    "logoAlt": "Johann Emmanuel Racing Logo",
+    "tagline": "Racing Towards The World Championship.",
+    "description": "Johann Emmanuel represents India on the international motorsport stage, competing across Europe and Asia with speed, precision, and relentless ambition."
+  },
+  "quickLinksTitle": "Quick Links",
+  "quickLinks": [
+    {
+      "href": "/results",
+      "label": "Results"
+    },
+    {
+      "href": "/about",
+      "label": "About"
+    },
+    {
+      "href": "/gallery",
+      "label": "Gallery"
+    },
+    {
+      "href": "/partners",
+      "label": "Partners"
+    },
+    {
+      "href": "/contact",
+      "label": "Contact"
+    }
+  ],
+  "contactTitle": "Contact Information",
+  "contact": {
+    "email": {
+      "label": "Email",
+      "value": "johannemmanuel.partnerships@gmail.com",
+      "href": "mailto:johannemmanuel.partnerships@gmail.com"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "+91 9840911406",
+      "href": "tel:+919840911406"
+    },
+    "location": {
+      "label": "Location",
+      "value": "Chennai, India"
+    }
+  },
+  "socialTitle": "Follow Us",
+  "socialLinks": [
+    {
+      "href": "https://instagram.com/johann_emmanuel11",
+      "label": "Instagram",
+      "icon": "instagram"
+    },
+    {
+      "href": "https://youtube.com/@johannreeves7201?si=l2cXssEmG_j3SQT4",
+      "label": "YouTube",
+      "icon": "youtube"
+    },
+    {
+      "href": "https://www.facebook.com/share/1B2AYuAzJo/",
+      "label": "Facebook",
+      "icon": "facebook"
+    },
+    {
+      "href": "https://www.linkedin.com/in/johann-reeves-b56b41332?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+      "label": "LinkedIn",
+      "icon": "linkedin"
+    }
+  ],
+  "bottomBar": {
+    "copyright": "© 2026 Johann Emmanuel Racing. All Rights Reserved."
+  }
+}

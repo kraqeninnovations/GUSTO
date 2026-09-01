@@ -1,0 +1,212 @@
+{
+  "hero": {
+    "eyebrow": "",
+    "title": {
+      "line1": "JOHAAN",
+      "line2": "EMMANUEL"
+    },
+    "subtitle": "From Chennai to the world's most demanding race circuits, Johann Emmanuel is one of India's fastest-rising motorcycle racers. Competing across Europe and Asia, he continues to push the limits of speed, precision, and performance.",
+    "ctaPrimary": {
+      "text": "View Racing Career",
+      "href": "/results"
+    },
+    "ctaSecondary": {
+      "text": "Partner With Johaan",
+      "href": "/about#contact"
+    }
+  },
+  "champions": {
+    "sectionLabel": "A Career Built One ",
+    "sectionTitle": "Corner At A Time.",
+    "subTitle": "Not every racing career begins on the podium.\nJohann's journey started in Chennai and evolved into international competition across Europe, Asia, and the Middle East. Every championship, every setback, and every victory has shaped the rider he is today.",
+    "items": [
+      {
+        "year": "2019",
+        "title": "Career Begins",
+        "description": "Johann's journey started in grassroots Indian motorcycle racing, taking his first steps on the circuit in Chennai and setting the foundation for high-level international competition.",
+        "image": "/car.jpeg"
+      },
+      {
+        "year": "2024",
+        "title": "Historic Qatar Hat-trick",
+        "description": "Dominating the international stage with a clean sweep at Lusail International Circuit in Qatar, proving speed and composure against seasoned world contenders.",
+        "image": "/qu.jpeg"
+      },
+      {
+        "year": "2026",
+        "title": "KTM Cup Champion",
+        "description": "Sealing the championship title with unmatched pace, tactical brilliance, and lap records across Europe and Asia as the journey accelerates towards the World Championship.",
+        "image": "/ktm.jpeg"
+      }
+    ]
+  },
+  "achievementsStats": {
+    "backgroundImage": "/hero-racer.jpg",
+    "sectionLabel": "KEY NUMBERS",
+    "sectionTitle": "Achievements & Targets",
+    "sectionSubtitle": "A summary of Johann's racing milestones, international achievements, championship goals, and career progress.",
+    "stats": [
+      {
+        "value": "7",
+        "label": "Championships Participated In"
+      },
+      {
+        "value": "10",
+        "label": "Countries Competed"
+      },
+      {
+        "value": "2",
+        "label": "Championships"
+      },
+      {
+        "value": "2028",
+        "label": "World Championship Target"
+      }
+    ]
+  },
+  "categories": {
+    "sectionTitle": "CATEGORIES",
+    "items": [
+      {
+        "year": "2020",
+        "title": "Honda CBR150",
+        "motorcycle": "Honda CBR150",
+        "image": "/card/2020.jpeg"
+      },
+      {
+        "year": "2021",
+        "title": "Honda CBR150",
+        "motorcycle": "Honda CBR150",
+        "image": "/card/2021.jpeg"
+      },
+      {
+        "year": "2022",
+        "title": "Honda NSF250R",
+        "motorcycle": "Honda NSF250R",
+        "image": "/card/2022.jpeg"
+      },
+      {
+        "year": "2023",
+        "title": "European Talent Cup",
+        "motorcycle": "Honda NSF250R",
+        "image": "/card/2023.jpeg"
+      },
+      {
+        "year": "2024",
+        "title": "European Talent Cup",
+        "subtitle": "Thailand Talent Cup",
+        "motorcycle": "Honda NSF250R",
+        "image": "/card/2024.jpeg"
+      },
+      {
+        "year": "2025",
+        "title": "Asia Road Racing Championship",
+        "subtitle": "Qatar QSTK Championship",
+        "motorcycle": "",
+        "image": "/card/2025.jpeg"
+      }
+    ]
+  },
+  "seasonSchedule": {
+    "sectionLabel": "SEASON SCHEDULE",
+    "title": "2026 ESBK Race Calendar",
+    "subtitle": "Follow Johann's 2026 ESBK championship journey across Spain and Portugal.",
+    "rounds": [
+      {
+        "round": "Round 1",
+        "date": "19–22 March",
+        "circuit": "Circuito de Jerez Ángel Nieto",
+        "location": "Jerez de la Frontera",
+        "country": "Spain",
+        "countryFlag": "🇪🇸",
+        "image": "/Calendar/jer.jpeg",
+        "alt": "Circuito de Jerez Ángel Nieto",
+        "status": "Complete"
+      },
+      {
+        "round": "Round 2",
+        "date": "07–10 May",
+        "circuit": "Circuito de Navarra",
+        "location": "Los Arcos",
+        "country": "Spain",
+        "countryFlag": "🇪🇸",
+        "image": "/Calendar/navarra.jpeg",
+        "alt": "Circuito de Navarra",
+        "status": "Complete"
+      },
+      {
+        "round": "Round 3",
+        "date": "18–21 June",
+        "circuit": "Circuito do Estoril",
+        "location": "Estoril",
+        "country": "Portugal",
+        "countryFlag": "🇵🇹",
+        "image": "/Calendar/estoril.jpeg",
+        "alt": "Circuito do Estoril",
+        "status": "Complete"
+      },
+      {
+        "round": "Round 4",
+        "date": "16–19 July",
+        "circuit": "MotorLand Aragón",
+        "location": "Alcañiz",
+        "country": "Spain",
+        "countryFlag": "🇪🇸",
+        "image": "/Calendar/moto.jpeg",
+        "alt": "MotorLand Aragón",
+        "status": "Complete"
+      },
+      {
+        "round": "Round 5",
+        "date": "10–13 September",
+        "circuit": "Circuit Ricardo Tormo",
+        "location": "Valencia",
+        "country": "Spain",
+        "countryFlag": "🇪🇸",
+        "image": "/Calendar/ric.jpeg",
+        "alt": "Circuit Ricardo Tormo",
+        "status": "Upcoming"
+      },
+      {
+        "round": "Round 6",
+        "date": "17–20 September",
+        "circuit": "Circuito de Navarra II",
+        "location": "Los Arcos",
+        "country": "Spain",
+        "countryFlag": "🇪🇸",
+        "image": "/Calendar/navarra.jpeg",
+        "alt": "Circuito de Navarra II",
+        "status": "Upcoming"
+      },
+      {
+        "round": "Round 7 (Finale)",
+        "date": "29 October – 01 November",
+        "circuit": "Circuito de Jerez Ángel Nieto II",
+        "location": "Jerez de la Frontera",
+        "country": "Spain",
+        "countryFlag": "🇪🇸",
+        "image": "/Calendar/jer.jpeg",
+        "alt": "Circuito de Jerez Ángel Nieto II",
+        "status": "Finale"
+      }
+    ]
+  },
+  "bottomHero": {
+    "sectionLabel": "EXPERIENCE THE RACING LEGACY",
+    "subtitle": "",
+    "sectionTitle": {
+      "line1": "Beyond The ",
+      "line2": "FINISH LINE"
+    },
+    "paragraph": "Every race is another chapter in Johann Emmanuel's pursuit of world-class excellence.From international championships to inspiring the next generation of Indian motorsport, the journey is only accelerating.",
+    "ctaPrimary": {
+      "text": "Become a Partner",
+      "href": "/gallery"
+    },
+    "ctaSecondary": {
+      "text": "Latest Results",
+      "href": "/updates"
+    },
+    "backgroundImage": "/IMG_8541.JPG"
+  }
+}

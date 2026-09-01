@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "badge": "About Johann",
+    "eyebrow": "OFFICIAL ATHLETE PROFILE",
+    "title": {
+      "line1": "JOHANN",
+      "line2": "EMMANUEL"
+    },
+    "subtitle": "Join a legacy of high-performance speed. Witness the journey of India's premier racing talent as he campaigns across the European and Asian championships.",
+    "ctaPrimary": {
+      "text": "Get In Touch",
+      "href": "#contact"
+    },
+    "ctaSecondary": {
+      "text": "Read Proposal",
+      "href": "#profile"
+    }
+  },
+  "profile": {
+    "sectionLabel": "RIDER PROFILE",
+    "sectionTitle": {
+      "line1": "THE CHAMPION'S",
+      "line2": "FOUNDATION"
+    },
+    "paragraphs": [
+      "Born <strong>April 11, 2006</strong>, in Chennai, India. Johann's affinity for motorsport was ignited at the age of six, raised in the fast-paced atmosphere of trackside paddocks.",
+      "His passion was nurtured by his father, <strong>Mr. Emmanuel Jebaraj</strong>, a multiple-time Indian national champion, laying the blueprint for technical discipline and racing IQ.",
+      "Today, Johann represents a rare breed of Indian racers competing on the demanding circuits of Europe and Asia. His path is built on consistency, year-round physical training, and a focus on podium results."
+    ],
+    "quickDetails": {
+      "hometown": {
+        "label": "HOMETOWN",
+        "value": "Chennai, India"
+      },
+      "age": {
+        "label": "AGE",
+        "value": "19 Years"
+      }
+    }
+  },
+  "careerOverview": {
+    "sectionLabel": "CAREER PATH",
+    "sectionTitle": {
+      "line1": "BUILDING TO",
+      "line2": "THE WORLD STAGE"
+    },
+    "paragraphs": [
+      "Johann entered competitive motorsport in <strong>2019 at age 13</strong>. His debut race ended with a fractured left humerus, a test of resolve that only deepened his commitment.",
+      "Returning in 2020, he secured a <strong>podium finish</strong> in the first race he completed. By 2022, his progress earned him a promotion to the highly competitive NSF250R category.",
+      "Between 2023 and 2024, he competed in the prestigious <strong>European Talent Cup</strong>, standing out as the only Indian rider on the grid. In 2024, he secured a remarkable 4th place in wet weather at Estoril, Portugal, alongside selection for the Thailand Talent Cup.",
+      "His breakout moment arrived in late 2024 with a clean sweep debut hat-trick at the <strong>Qatar Superbike Championship (Lusail)</strong>, winning all three races in the SSP300 category. In 2025, supported by Honda Racing India, he advanced to the Asia Road Racing Championship (ARRC) AP250 class."
+    ]
+  },
+  "achievements": {
+    "sectionLabel": "RECORDS & ACCOLADES",
+    "sectionTitle": "Key Milestones",
+    "galleryItems": [
+      {
+        "image": "/ktm.jpeg",
+        "text": "2026 KTM CUP CHAMPION"
+      },
+      {
+        "image": "/save.jpg",
+        "text": "2025 QATAR 600CC CHAMPION"
+      },
+      {
+        "image": "/qu.jpeg",
+        "text": "LUSAIL SSP300 RECORD HOLDER"
+      },
+      {
+        "image": "/ero.jpeg",
+        "text": "QATAR DEBUT SWEEP WINNER"
+      },
+      {
+        "image": "/car.jpeg",
+        "text": "EUROPE TALENT CUP TOP 10"
+      }
+    ]
+  },
+  "programme2026": {
+    "sectionLabel": "2026 CAMPAIGN",
+    "sectionTitle": {
+      "line1": "RACING",
+      "line2": "PROGRAMME"
+    },
+    "paragraph": "The 2026 calendar targets elite competitiveness across key international and regional grids, designed to build track time and prepare for the ultimate championship progression.",
+    "longTermTarget": {
+      "label": "LONG-TERM TARGET",
+      "value": "Full-time World Championship by 2028"
+    },
+    "programs": [
+      {
+        "title": "Yamaha R7 Cup",
+        "subtitle": "European Superbike Championship Support"
+      },
+      {
+        "title": "JuniorGP (600cc)",
+        "subtitle": "Junior World Championship Series"
+      },
+      {
+        "title": "Qatar Supersport 600",
+        "subtitle": "Defending Regional Title"
+      },
+      {
+        "title": "Indian National Championship",
+        "subtitle": "National Superstock 600 Title Campaign"
+      },
+      {
+        "title": "ARRC 600cc Rounds",
+        "subtitle": "Selected Asia Road Racing Championship wildcard entry"
+      }
+    ]
+  },
+  "mediaCoverage": {
+    "sectionLabel": "GLOBAL VIEWERSHIP",
+    "sectionTitle": "Media & Broadcast Coverage",
+    "stats": [
+      {
+        "value": 22,
+        "suffix": "+",
+        "label": "Race Weekends"
+      },
+      {
+        "value": 27,
+        "suffix": "",
+        "label": "Countries Broadcasted"
+      },
+      {
+        "value": 30,
+        "suffix": "+",
+        "label": "Broadcasting Channels"
+      }
+    ],
+    "paragraph": "In addition to international TV channels, all races are streamed live globally on official YouTube motorsport networks, securing active viewer reach across mobile audiences."
+  },
+  "contact": {
+    "sectionLabel": "CONNECT WITH US",
+    "sectionTitle": "Get In Touch",
+    "details": {
+      "email": {
+        "label": "EMAIL",
+        "value": "johannemmanuel.partnerships@gmail.com",
+        "href": "mailto:johannemmanuel.partnerships@gmail.com"
+      },
+      "phone": {
+        "label": "PHONE",
+        "value": "+91 9840911406",
+        "href": "tel:+919840911406"
+      },
+      "instagram": {
+        "label": "INSTAGRAM",
+        "value": "@johann_emmanuel11",
+        "href": "https://instagram.com/johann_emmanuel11"
+      }
+    },
+    "form": {
+      "companyLabel": "Company / Brand Name",
+      "companyPlaceholder": "e.g. Red Bull Racing",
+      "contactLabel": "Contact Person",
+      "contactPlaceholder": "e.g. John Doe",
+      "messageLabel": "Sponsorship Interest / Message",
+      "messagePlaceholder": "Tell us about your campaign goals...",
+      "submitText": "Send Proposal Inquiry",
+      "successMessage": "Thank you for your interest! We will get in touch with you shortly."
+    }
+  }
+}

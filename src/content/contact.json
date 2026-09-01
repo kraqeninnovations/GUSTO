@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "badge": "OFFICIAL COMMUNICATION HUB",
+    "sectionLabel": "CONNECT WITH THE TEAM",
+    "title": "START THE CONVERSATION",
+    "subtitle": "Whether you are exploring official brand partnerships, media coverage, or motorsport sponsorship opportunities, our management team is ready to connect."
+  },
+  "info": {
+    "sectionTitle": "DIRECT CONTACTS",
+    "email": {
+      "label": "PARTNERSHIP & MEDIA INQUIRIES",
+      "value": "johannemmanuel.partnerships@gmail.com",
+      "href": "mailto:johannemmanuel.partnerships@gmail.com"
+    },
+    "phone": {
+      "label": "PHONE & WHATSAPP",
+      "value": "+91 9840911406",
+      "href": "tel:+919840911406"
+    },
+    "location": {
+      "label": "BASE LOCATION",
+      "value": "Chennai, India"
+    },
+    "social": {
+      "label": "OFFICIAL CHANNELS",
+      "instagram": "https://instagram.com/johann_emmanuel11",
+      "youtube": "https://youtube.com/@johannreeves7201?si=l2cXssEmG_j3SQT4",
+      "facebook": "https://www.facebook.com/share/1B2AYuAzJo/",
+      "linkedin": "https://www.linkedin.com/in/johann-reeves-b56b41332"
+    }
+  },
+  "form": {
+    "title": "TRANSMIT INQUIRY",
+    "subtitle": "Fill out your details below and our team will get in touch within 24 business hours.",
+    "fields": {
+      "name": "FULL NAME",
+      "email": "EMAIL ADDRESS",
+      "subject": "SUBJECT / CATEGORY",
+      "message": "MESSAGE / DETAILS"
+    },
+    "submitText": "SEND INQUIRY",
+    "successMessage": "Thank you! Your message has been transmitted successfully. We will get back to you shortly."
+  }
+}

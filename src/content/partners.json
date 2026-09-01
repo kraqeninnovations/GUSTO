@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "badge": "PARTNERSHIPS",
+    "eyebrow": "OFFICIAL SPONSORS & BRAND PARTNERS",
+    "title": {
+      "line1": "BRAND",
+      "line2": "PARTNERS"
+    },
+    "subtitle": "Teaming up with premier global brands and industry leaders to drive racing performance, innovation, and global commercial reach on the world stage."
+  },
+  "brandPartners": {
+    "sectionLabel": "CURRENT SPONSORS",
+    "sectionTitle": "Sponsors",
+    "items": [
+      {
+        "id": "kyt",
+        "name": "KYT HELMETS",
+        "logo": "/part/kyt-helmet-seeklogo 2.png",
+        "bgType": "black",
+        "description": "KYT Helmets are designed and developed in Italy and manufactured in Indonesia by PT Tara Citra Kusuma. The brand is known for combining premium safety, racing technology, and innovative helmet design trusted by professional riders worldwide."
+      },
+      {
+        "id": "sidvin",
+        "name": "SIDVIN ENERGY",
+        "logo": "",
+        "bgType": "black",
+        "description": "Sidvin Energy Engineering is an engineering design services company specializing in the oil & gas, petrochemical, power, and process industries, delivering innovative engineering solutions worldwide."
+      },
+      {
+        "id": "4sr",
+        "name": "4SR MOTO SUITS",
+        "logo": "/part/images.jpeg",
+        "bgType": "black",
+        "description": "4SR Moto Suits is a Czech-based motorcycle apparel company known for producing premium racing suits, protective riding gear, and stylish motorcycle clothing used by professional racers across the world."
+      },
+      {
+        "id": "voyage",
+        "name": "VOYAGE EYEWEAR",
+        "logo": "/part/image 89.png",
+        "bgType": "black",
+        "description": "Voyage Eyewear, a venture of SS Enterprises, offers premium stylish sunglasses and eyewear that combine modern fashion, comfort, and everyday performance."
+      },
+      {
+        "id": "ceat",
+        "name": "CEAT",
+        "logo": "/part/CEAT_Logo 1.png",
+        "bgType": "black",
+        "description": "CEAT is a leading global tire manufacturer engineering high-performance motorcycle tires built for exceptional grip, durability, and track precision."
+      },
+      {
+        "id": "fettle",
+        "name": "FETTLE",
+        "logo": "/part/fettle_logo 1.png",
+        "bgType": "black",
+        "description": "Fettle is a premier performance and fitness brand dedicated to supporting elite athletes with specialized recovery, physical training, and endurance solutions."
+      },
+      {
+        "id": "motul",
+        "name": "MOTUL",
+        "logo": "/part/Motul_logo 1.png",
+        "bgType": "black",
+        "description": "Motul is a world-renowned French lubricant brand specializing in high-performance synthetic engine oils and race-proven fluids for competitive motorsports."
+      },
+      {
+        "id": "ogio",
+        "name": "OGIO",
+        "logo": "/part/OGIO.png",
+        "bgType": "black",
+        "description": "OGIO designs and manufactures premium, heavy-duty gear bags, backpacks, and travel luggage engineered specifically for powersports and action sports athletes."
+      },
+      {
+        "id": "rcb",
+        "name": "RCB",
+        "logo": "/part/RCB.png",
+        "bgType": "black",
+        "description": "RCB (Racing Boy) is a premier manufacturer of high-performance motorcycle racing parts, braking systems, and aftermarket components trusted across international racing series."
+      },
+      {
+        "id": "spnracing",
+        "name": "SPN RACING",
+        "logo": "/part/SPN RACING.png",
+        "bgType": "black",
+        "description": "SPN Racing is a dedicated motorsports tuning and performance engineering team providing elite track setup, technical support, and race preparation."
+      }
+    ]
+  }
+}

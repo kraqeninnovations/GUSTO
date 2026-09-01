@@ -1,0 +1,27 @@
+{
+  "title": "Gallery",
+  "images": [
+    { "id": 1, "image": "/00.jpeg", "title": "Race Day" },
+    { "id": 2, "image": "/01.jpeg", "title": "Pit Stop" },
+    { "id": 3, "image": "/02.jpeg", "title": "Victory Lap" },
+    { "id": 4, "image": "/2.jpeg", "title": "Paddock" },
+    { "id": 5, "image": "/3.jpeg", "title": "Grid Walk" },
+    { "id": 6, "image": "/4.jpeg", "title": "Highlights" },
+    { "id": 7, "image": "/5.jpeg", "title": "Race Day" },
+    { "id": 8, "image": "/6.jpeg", "title": "Pit Stop" },
+    { "id": 9, "image": "/car.jpeg", "title": "Victory Lap" },
+    { "id": 10, "image": "/ktm.jpeg", "title": "Paddock" },
+    { "id": 11, "image": "/qu.jpeg", "title": "Grid Walk" },
+    { "id": 12, "image": "/joh.png", "title": "Highlights" },
+    { "id": 13, "image": "/IMG_4271.JPG.jpeg", "title": "Race Day" },
+    { "id": 14, "image": "/IMG_4272.JPG.jpeg", "title": "Pit Stop" },
+    { "id": 15, "image": "/IMG_4273.JPG.jpeg", "title": "Victory Lap" },
+    { "id": 16, "image": "/IMG_4274.JPG.jpeg", "title": "Paddock" },
+    { "id": 17, "image": "/IMG_4275.JPG.jpeg", "title": "Grid Walk" },
+    { "id": 18, "image": "/IMG_4278.JPG.jpeg", "title": "Highlights" },
+    { "id": 19, "image": "/IMG_8541.JPG", "title": "Race Day" },
+    { "id": 20, "image": "/save.jpg", "title": "Pit Stop" },
+    { "id": 21, "image": "/hero-racer.jpg", "title": "Victory Lap" },
+    { "id": 22, "image": "/johi-logo.png", "title": "Paddock" }
+  ]
+}

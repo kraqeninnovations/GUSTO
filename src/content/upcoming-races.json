@@ -1,0 +1,63 @@
+{
+  "pageTitle": "Upcoming Races",
+  "tableHeaders": {
+    "category": "Category / Class",
+    "championship": "Championship Details",
+    "years": "Years Contested"
+  },
+  "mobileCards": {
+    "classLabel": "CLASS",
+    "championshipLabel": "CHAMPIONSHIP",
+    "yearsLabel": "YEARS"
+  },
+  "compliance": {
+    "title": "Official Regulatory Compliance",
+    "paragraph": "All contested classes are regulated by the FIM, FIM Asia, and respective national motorsport federations. Riders must comply with technical constraints, tire allocations, fuel specifications, and safety gear certifications.",
+    "buttonText": "Download Official ARRC rulebook",
+    "buttonHref": "https://asiaroadracing.com/wp-content/uploads/2026/04/ARRC-2026-03-26.pdf"
+  },
+  "specData": [
+    {
+      "category": "CBR150",
+      "championship": "Honda India Talent Cup",
+      "years": "2022",
+      "details": "Entry-level single-cylinder development class helping young riders master track basics, weight shifts, and corner speed lines."
+    },
+    {
+      "category": "NSF250R",
+      "championship": "Honda India Talent Cup (National & International)",
+      "years": "2023",
+      "details": "High-spec Moto3-specification chassis and engine, demanding extreme throttle control, braking precision, and racecraft."
+    },
+    {
+      "category": "300 Supersport (SSP300)",
+      "championship": "Qatar Superbike & Superstock Championship",
+      "years": "2024",
+      "details": "Production-derived lightweight class. Johann swept a debut weekend clean hat-trick victory at Lusail Circuit."
+    },
+    {
+      "category": "AP250",
+      "championship": "Asia Road Racing Championship (ARRC)",
+      "years": "2025",
+      "details": "Asia's premier production class. Twin-cylinder configurations with advanced fuel control mappings."
+    },
+    {
+      "category": "Supersport 600",
+      "championship": "Qatar Superstock / Supersport Championship",
+      "years": "2025",
+      "details": "High-power 600cc inline-4 platforms, demanding physical conditioning, high mid-corner roll speeds, and tire management."
+    },
+    {
+      "category": "Yamaha R7 Cup",
+      "championship": "European Superbike Championship (ESBK Support)",
+      "years": "2026",
+      "details": "Midweight twin-cylinder spec series run on classic European circuits like Estoril and Jerez."
+    },
+    {
+      "category": "JuniorGP (600cc)",
+      "championship": "Junior World Championship Series",
+      "years": "2026",
+      "details": "The ultimate stepping stone to Moto2/MotoGP, testing riders against the fastest junior grid in the world."
+    }
+  ]
+}
