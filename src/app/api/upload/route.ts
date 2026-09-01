@@ -4,11 +4,6 @@ import path from "path";
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
 
 async function readBody(req: Request): Promise<Buffer> {
   const chunks: Uint8Array[] = [];
