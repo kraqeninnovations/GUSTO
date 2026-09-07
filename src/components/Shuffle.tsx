@@ -122,6 +122,12 @@ const Shuffle: React.FC<ShuffleProps> = ({
   useGSAP(
     () => {
       if (!ref.current || !text || !fontsLoaded) return;
+      const isAllowedAnimation = text.toUpperCase().includes("BEYOND THE") || text.toUpperCase().includes("FINISH LINE");
+      if (!isAllowedAnimation) {
+        setReady(true);
+        onShuffleComplete?.();
+        return;
+      }
       if (respectReducedMotion && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         setReady(true);
         onShuffleComplete?.();

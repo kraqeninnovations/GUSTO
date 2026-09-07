@@ -22,15 +22,15 @@
       "championship": "ESBK 2026",
       "championshipLogoText": "ESBK",
       "result": "COMPLETE",
-      "position": "P1",
-      "points": "25 PTS",
+      "race1": "Race 1 — DNF",
+      "race2": "Race 2 — DNF",
       "badge": "✅ Complete",
       "status": "complete",
       "categories": [
         { "name": "Free Practice", "link": "#" },
         { "name": "Qualifying", "link": "#", "hasLaptime": true },
-        { "name": "Race 1", "link": "#", "hasLaptime": true },
-        { "name": "Race 2", "link": "#", "hasLaptime": true }
+        { "name": "Race 1 — DNF", "link": "#", "hasLaptime": true },
+        { "name": "Race 2 — DNF", "link": "#", "hasLaptime": true }
       ]
     },
     {
@@ -46,15 +46,15 @@
       "championship": "ESBK 2026",
       "championshipLogoText": "ESBK",
       "result": "COMPLETE",
-      "position": "P1",
-      "points": "25 PTS",
+      "race1": "Race 1 — DNF",
+      "race2": "Race 2 — P7",
       "badge": "✅ Complete",
       "status": "complete",
       "categories": [
         { "name": "Free Practice", "link": "#" },
         { "name": "Qualifying", "link": "#", "hasLaptime": true },
-        { "name": "Race 1", "link": "#", "hasLaptime": true },
-        { "name": "Race 2", "link": "#", "hasLaptime": true }
+        { "name": "Race 1 — DNF", "link": "#", "hasLaptime": true },
+        { "name": "Race 2 — P7", "link": "#", "hasLaptime": true }
       ]
     },
     {
@@ -70,15 +70,15 @@
       "championship": "ESBK 2026",
       "championshipLogoText": "ESBK",
       "result": "COMPLETE",
-      "position": "P1",
-      "points": "25 PTS",
+      "race1": "Race 1 — P12",
+      "race2": "Race 2 — P6",
       "badge": "✅ Complete",
       "status": "complete",
       "categories": [
         { "name": "Free Practice", "link": "#" },
         { "name": "Qualifying", "link": "#", "hasLaptime": true },
-        { "name": "Race 1", "link": "#", "hasLaptime": true },
-        { "name": "Race 2", "link": "#", "hasLaptime": true }
+        { "name": "Race 1 — P12", "link": "#", "hasLaptime": true },
+        { "name": "Race 2 — P6", "link": "#", "hasLaptime": true }
       ]
     },
     {

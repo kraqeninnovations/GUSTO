@@ -1,13 +1,12 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Image from "next/image";
-import InteractiveBook from "../../components/InteractiveBook";
 import galleryData from "../../content/gallery.json";
-import { X, Upload } from "lucide-react";
+import { X, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface GalleryImage {
   id: number;
@@ -16,206 +15,177 @@ interface GalleryImage {
 }
 
 export default function GalleryPage() {
-  const [images, setImages] = useState<GalleryImage[]>(galleryData.images || []);
+  const [images] = useState<GalleryImage[]>(galleryData.images || []);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const [uploading, setUploading] = useState(false);
-  const [bookWidth, setBookWidth] = useState(340);
-  const [bookHeight, setBookHeight] = useState(460);
 
+  // Prevent background scrolling when lightbox modal is active
   useEffect(() => {
-    const updateBookSize = () => {
-      const w = window.innerWidth;
-      if (w < 480) {
-        setBookWidth(170);
-        setBookHeight(Math.round((170 * 460) / 340));
-      } else if (w < 640) {
-        setBookWidth(190);
-        setBookHeight(Math.round((190 * 460) / 340));
-      } else {
-        setBookWidth(340);
-        setBookHeight(460);
+    if (lightboxIndex !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [lightboxIndex]);
+
+  // Keyboard navigation for Lightbox (ESC, Left, Right)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (lightboxIndex === null) return;
+      if (e.key === "Escape") setLightboxIndex(null);
+      if (e.key === "ArrowLeft") {
+        setLightboxIndex((prev) => (prev === null ? null : (prev - 1 + images.length) % images.length));
+      }
+      if (e.key === "ArrowRight") {
+        setLightboxIndex((prev) => (prev === null ? null : (prev + 1) % images.length));
       }
     };
 
-    updateBookSize();
-    window.addEventListener("resize", updateBookSize);
-    return () => window.removeEventListener("resize", updateBookSize);
-  }, []);
-
-  const handleUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (!files || files.length === 0) return;
-
-    setUploading(true);
-    const readers: Promise<GalleryImage>[] = Array.from(files).map((file, idx) => {
-      return new Promise((resolve) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          resolve({
-            id: Date.now() + idx,
-            image: reader.result as string,
-            title: file.name.replace(/\.[^/.]+$/, ""),
-          });
-        };
-        reader.readAsDataURL(file);
-      });
-    });
-
-    Promise.all(readers).then((newImages) => {
-      setImages((prev) => [...prev, ...newImages]);
-      setUploading(false);
-    });
-
-    e.target.value = "";
-  }, []);
-
-  const bookPages = images.length > 0
-    ? images.map((img, idx) => ({
-        title: img.title,
-        content: (
-          <div className="relative w-full h-full flex items-center justify-center bg-zinc-900 rounded-lg overflow-hidden">
-            <Image src={img.image} alt={img.title} fill className="object-contain" />
-          </div>
-        ),
-        backContent: idx + 1 < images.length ? (
-          <div className="relative w-full h-full flex items-center justify-center bg-zinc-900 rounded-lg overflow-hidden">
-            <Image src={images[idx + 1].image} alt={images[idx + 1].title} fill className="object-contain" />
-          </div>
-        ) : null,
-        pageNumber: idx + 1,
-      }))
-    : [];
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxIndex, images.length]);
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-red-600 selection:text-white overflow-x-hidden flex flex-col">
       <Header />
       <main className="flex-1">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl relative z-10">
-          <div className="mb-8 sm:mb-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 max-w-7xl relative z-10">
+          
+          {/* Gallery Title & Subtitle Header */}
+          <div className="mb-6 sm:mb-8 md:mb-10">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tight">
               {galleryData.title || "Gallery"}
             </h1>
-            <p className="text-zinc-400 text-xs sm:text-sm mt-2">{images.length} photos</p>
+            <p className="text-zinc-400 text-xs sm:text-sm mt-1.5 sm:mt-2 font-mono tracking-wide">
+              {galleryData.subtitle ? `${galleryData.subtitle} — ` : ""}{images.length} photos
+            </p>
           </div>
 
-          {/* Single Interactive Book - Centered */}
-          <div className="flex justify-center mb-10 sm:mb-14">
-            <InteractiveBook
-              coverImage={images[0]?.image || "/hero-racer.jpg"}
-              bookTitle={galleryData.title?.toUpperCase() || "GALLERY"}
-              bookAuthor="Racing Gallery — 2026 Collection"
-              pages={bookPages}
-              width={bookWidth}
-              height={bookHeight}
-            />
-          </div>
-
-          {/* Upload Button */}
-          <div className="flex justify-center mb-10 sm:mb-14">
-            <label className="cursor-pointer inline-flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white text-xs font-black uppercase tracking-widest rounded-lg transition shadow-lg shadow-red-600/20">
-              <Upload size={16} />
-              {uploading ? "Uploading..." : "Upload Images"}
-              <input
-                type="file"
-                accept="image/*"
-                multiple
-                onChange={handleUpload}
-                disabled={uploading}
-                className="hidden"
-              />
-            </label>
-          </div>
-
-          {/* Gallery Grid */}
-          <motion.div layout className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          {/* Responsive Multi-Column Gallery Grid */}
+          <motion.div
+            layout
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-2.5 sm:gap-4 md:gap-5"
+          >
             {images.map((img, idx) => (
               <motion.div
                 key={img.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: Math.min(idx * 0.04, 0.6) }}
+                transition={{ duration: 0.35, delay: Math.min(idx * 0.02, 0.4) }}
                 onClick={() => setLightboxIndex(idx)}
-                className="group relative aspect-square overflow-hidden rounded-xl bg-zinc-950 border border-zinc-900 shadow-lg shadow-black/20 transition-all duration-300 hover:border-red-600/30 hover:shadow-red-600/10 cursor-pointer"
+                className="group relative aspect-square overflow-hidden rounded-xl bg-zinc-950 border border-zinc-900 shadow-md transition-all duration-300 hover:border-red-600/50 hover:shadow-red-600/10 active:scale-[0.98] cursor-pointer touch-manipulation"
               >
                 <Image
                   src={img.image}
                   alt={img.title}
                   fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1280px) 25vw, 20vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2.5 sm:p-3">
+                  <span className="text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-wider truncate">
+                    {img.title}
+                  </span>
+                </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
 
-        {/* Lightbox */}
+        {/* Fullscreen Responsive Lightbox / Popup */}
         <AnimatePresence>
           {lightboxIndex !== null && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-3 sm:p-6 select-none"
               onClick={() => setLightboxIndex(null)}
             >
-              <button
-                type="button"
-                onClick={() => setLightboxIndex(null)}
-                className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-zinc-900/80 hover:bg-zinc-800 text-white flex items-center justify-center transition border border-zinc-700"
-              >
-                <X size={20} />
-              </button>
+              {/* Top Bar for Lightbox Controls */}
+              <div className="absolute top-3 left-3 right-3 sm:top-6 sm:left-6 sm:right-6 z-50 flex items-center justify-between pointer-events-none">
+                {/* BACK Button (Top Left) */}
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setLightboxIndex(null);
+                  }}
+                  className="pointer-events-auto px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-zinc-900/90 hover:bg-zinc-800 active:scale-95 text-white text-[11px] sm:text-xs font-black uppercase tracking-widest flex items-center gap-1.5 border border-zinc-700 transition hover:border-red-500/50 shadow-lg"
+                >
+                  <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span>BACK</span>
+                </button>
 
+                {/* CLOSE (X) Button (Top Right) */}
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setLightboxIndex(null);
+                  }}
+                  className="pointer-events-auto w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-zinc-900/90 hover:bg-zinc-800 active:scale-95 text-white flex items-center justify-center transition border border-zinc-700 hover:border-red-500/50 shadow-lg"
+                >
+                  <X className="w-4 h-4 sm:w-5 sm:h-5" />
+                </button>
+              </div>
+
+              {/* Navigation Arrows */}
               {images.length > 1 && (
                 <>
-                  <div className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2">
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setLightboxIndex((prev) => (prev === null ? null : (prev - 1 + images.length) % images.length));
-                      }}
-                      className="px-3 sm:px-4 py-2 bg-zinc-900/80 hover:bg-zinc-800 text-white text-[10px] sm:text-xs font-black uppercase tracking-widest rounded-lg transition border border-zinc-700"
-                    >
-                      Previous
-                    </button>
-                  </div>
-                  <div className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2">
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setLightboxIndex((prev) => (prev === null ? null : (prev + 1) % images.length));
-                      }}
-                      className="px-3 sm:px-4 py-2 bg-zinc-900/80 hover:bg-zinc-800 text-white text-[10px] sm:text-xs font-black uppercase tracking-widest rounded-lg transition border border-zinc-700"
-                    >
-                      Next
-                    </button>
-                  </div>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setLightboxIndex((prev) => (prev === null ? null : (prev - 1 + images.length) % images.length));
+                    }}
+                    className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-50 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-zinc-900/80 hover:bg-zinc-800 active:scale-95 text-white flex items-center justify-center transition border border-zinc-700/80 hover:border-red-500/50 shadow-lg"
+                  >
+                    <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setLightboxIndex((prev) => (prev === null ? null : (prev + 1) % images.length));
+                    }}
+                    className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-50 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-zinc-900/80 hover:bg-zinc-800 active:scale-95 text-white flex items-center justify-center transition border border-zinc-700/80 hover:border-red-500/50 shadow-lg"
+                  >
+                    <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </button>
                 </>
               )}
 
+              {/* Lightbox Main Image Display */}
               <motion.div
                 key={lightboxIndex}
-                initial={{ scale: 0.95, opacity: 0 }}
+                initial={{ scale: 0.96, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.95, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="relative max-w-5xl w-full max-h-[85vh] flex items-center justify-center"
+                exit={{ scale: 0.96, opacity: 0 }}
+                transition={{ duration: 0.25 }}
+                className="relative max-w-6xl w-full max-h-[85vh] flex flex-col items-center justify-center pt-10 pb-2 sm:pt-0 sm:pb-0"
                 onClick={(e) => e.stopPropagation()}
               >
-                <Image
-                  src={images[lightboxIndex].image}
-                  alt={images[lightboxIndex].title}
-                  width={1200}
-                  height={800}
-                  className="object-contain max-h-[85vh] w-auto mx-auto rounded-lg"
-                  priority
-                />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-zinc-900/80 px-4 py-2 rounded-full text-white text-xs font-bold uppercase tracking-widest border border-zinc-700">
-                  {lightboxIndex + 1} / {images.length}
+                <div className="relative w-full h-[65vh] sm:h-[75vh] flex items-center justify-center">
+                  <Image
+                    src={images[lightboxIndex].image}
+                    alt={images[lightboxIndex].title}
+                    fill
+                    className="object-contain rounded-lg max-w-full max-h-full"
+                    priority
+                    sizes="100vw"
+                  />
+                </div>
+                <div className="mt-3 sm:mt-4 bg-zinc-900/90 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest border border-zinc-700 flex items-center gap-2 sm:gap-3 max-w-[90vw] truncate shadow-lg">
+                  <span className="truncate">{images[lightboxIndex].title}</span>
+                  <span className="text-zinc-500 shrink-0">•</span>
+                  <span className="text-red-500 font-mono shrink-0">
+                    {lightboxIndex + 1} / {images.length}
+                  </span>
                 </div>
               </motion.div>
             </motion.div>

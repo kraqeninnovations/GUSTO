@@ -35,25 +35,6 @@ function BrandLogoDisplay({ brand }: { brand: BrandPartnerItem }) {
 
   // Styled typography fallbacks for missing image paths wrapped in StickerPeelLogo
   switch (brand.id) {
-    case "sidvin":
-      return (
-        <div className="w-full h-full bg-white flex flex-col items-center justify-center p-6 text-center select-none overflow-hidden">
-          <StickerPeelLogo
-            alt={brand.name}
-            fallback={
-              <div className="flex flex-col items-center justify-center">
-                <span className="font-black text-2xl tracking-tight text-[#0066cc] uppercase font-sans">
-                  SIDVIN
-                </span>
-                <span className="text-[10px] tracking-wider font-semibold text-[#0066cc] lowercase mt-0.5">
-                  energy engineering
-                </span>
-              </div>
-            }
-          />
-        </div>
-      );
-
     case "kyt":
       return (
         <div className="w-full h-full bg-black flex flex-col items-center justify-center p-6 text-center select-none border-b border-zinc-800 overflow-hidden">
@@ -104,12 +85,6 @@ function MobileCircularLogo({ brand }: { brand: BrandPartnerItem }) {
   }
 
   switch (brand.id) {
-    case "sidvin":
-      return (
-        <span className="font-black text-[11px] tracking-tighter text-[#0066cc] uppercase font-sans text-center">
-          SIDVIN
-        </span>
-      );
     case "kyt":
       return (
         <span className="font-black text-xs tracking-tighter text-white italic font-mono text-center">

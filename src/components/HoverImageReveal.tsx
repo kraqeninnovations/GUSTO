@@ -60,22 +60,21 @@ export default function HoverImageReveal({ items }: HoverImageRevealProps) {
             transition={{ duration: 0.4, delay: idx * 0.05 }}
             className="bg-zinc-950 border border-zinc-900 rounded-2xl overflow-hidden p-4 space-y-3 flex flex-col justify-between"
           >
-            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900">
+            <div className="relative w-full h-40 sm:h-48 rounded-xl overflow-hidden bg-zinc-900/80 p-2 flex items-center justify-center">
               <Image
                 src={item.image}
                 alt={item.text}
                 fill
-                sizes="(max-width: 768px) 100vw, 400px"
-                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 300px"
+                className="object-contain object-center p-1"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
             </div>
             <h3
               className="text-white font-normal uppercase tracking-tight"
               style={{
                 fontFamily: "RicoPalm, sans-serif",
-                fontSize: "clamp(18px, 4vw, 24px)",
+                fontSize: "clamp(16px, 3.5vw, 20px)",
                 letterSpacing: "-0.03em",
                 lineHeight: "1.1",
               }}
@@ -95,14 +94,14 @@ export default function HoverImageReveal({ items }: HoverImageRevealProps) {
       >
         {/* Floating Image element following cursor */}
         <motion.div
-          className="pointer-events-none absolute top-0 left-0 z-30 overflow-hidden rounded-[16px] border border-zinc-700/50 shadow-2xl shadow-black/90 bg-zinc-950"
+          className="pointer-events-none absolute top-0 left-0 z-30 overflow-hidden rounded-2xl border border-zinc-700/60 shadow-2xl shadow-black/90 bg-zinc-950/95 backdrop-blur-md p-3"
           style={{
             x: imageX,
             y: imageY,
             translateX: "-50%",
             translateY: "-50%",
-            width: 420,
-            height: 520,
+            width: 270,
+            height: 330,
           }}
           animate={{
             opacity: hoveredIndex !== null ? 1 : 0,
@@ -113,11 +112,11 @@ export default function HoverImageReveal({ items }: HoverImageRevealProps) {
           {items.map((item, idx) => (
             <motion.div
               key={idx}
-              className="absolute inset-0 w-full h-full"
+              className="absolute inset-0 w-full h-full p-3 flex items-center justify-center"
               initial={false}
               animate={{
                 opacity: hoveredIndex === idx ? 1 : 0,
-                scale: hoveredIndex === idx ? 1 : 1.08,
+                scale: hoveredIndex === idx ? 1 : 1.05,
               }}
               transition={{ duration: 0.35, ease: "easeOut" }}
             >
@@ -126,15 +125,15 @@ export default function HoverImageReveal({ items }: HoverImageRevealProps) {
                   src={item.image}
                   alt={item.text}
                   fill
-                  sizes="420px"
-                  className="object-contain"
+                  sizes="270px"
+                  className="object-contain object-center p-2"
                   priority={idx < 3}
                   style={{
                     filter: "brightness(1.05) contrast(1.05) saturate(1.1)",
                   }}
                 />
               ) : (
-                <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-950" />
+                <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-950 rounded-xl" />
               )}
             </motion.div>
           ))}

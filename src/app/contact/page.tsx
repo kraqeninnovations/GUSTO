@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import gsap from "gsap";
+import { Mail, Phone, MessageSquare, MapPin, ArrowUpRight } from "lucide-react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Shuffle from "../../components/Shuffle";
@@ -23,19 +24,6 @@ export default function ContactPage() {
   const shouldReduceMotion = useReducedMotion();
   const heroRef = useRef<HTMLDivElement>(null);
 
-  // Form State
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [activeField, setActiveField] = useState<string | null>(null);
-
   // Mouse Parallax for Desktop
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -43,8 +31,8 @@ export default function ContactPage() {
     const handleMouseMove = (e: MouseEvent) => {
       if (window.innerWidth >= 1024) {
         const { innerWidth, innerHeight } = window;
-        const x = (e.clientX / innerWidth - 0.5) * 30;
-        const y = (e.clientY / innerHeight - 0.5) * 30;
+        const x = (e.clientX / innerWidth - 0.5) * 20;
+        const y = (e.clientY / innerHeight - 0.5) * 20;
         setMousePos({ x, y });
       }
     };
@@ -57,41 +45,11 @@ export default function ContactPage() {
     if (heroRef.current && !shouldReduceMotion) {
       gsap.fromTo(
         heroRef.current,
-        { opacity: 0, y: 40 },
+        { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
       );
     }
   }, [shouldReduceMotion]);
-
-  // Form Validation
-  const validateForm = () => {
-    const newErrors: { [key: string]: string } = {};
-    if (!formData.name.trim()) newErrors.name = "Full Name is required";
-    if (!formData.email.trim()) {
-      newErrors.email = "Email Address is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";
-    }
-    if (!formData.subject.trim()) newErrors.subject = "Subject is required";
-    if (!formData.message.trim()) newErrors.message = "Message cannot be empty";
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!validateForm()) return;
-
-    setIsSubmitting(true);
-
-    // Simulate API transmission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setErrors({});
-    }, 1200);
-  };
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-red-600 selection:text-white overflow-x-hidden">
@@ -127,12 +85,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Main Interactive Contact Section */}
+      {/* Main Direct Contact Section */}
       <section className="py-12 sm:py-20 bg-black relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
-            {/* Left Column: 3D Experience & Direct Contact Cards */}
+            {/* LEFT SIDE — 3D VISUAL & DIRECT CONTACTS */}
             <motion.div
               style={{
                 x: mousePos.x * 0.5,
@@ -142,236 +100,84 @@ export default function ContactPage() {
               className="lg:col-span-5 space-y-6"
             >
               {/* 3D Render Panel */}
-              <div className="relative w-full h-[340px] sm:h-[420px] lg:h-[460px] rounded-3xl overflow-hidden bg-neutral-100 border border-zinc-700/60 shadow-2xl shadow-red-950/20">
+              <div className="relative w-full h-[340px] sm:h-[420px] lg:h-[480px] rounded-3xl overflow-hidden bg-neutral-100 border border-zinc-700/60 shadow-2xl shadow-red-950/20">
                 <Contact3DScene />
-                <div className="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md border border-zinc-800 p-4 rounded-2xl flex items-center justify-between shadow-lg">
-                  <div className="flex items-center gap-3">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping" />
-                    <span className="text-xs font-mono tracking-widest text-zinc-300 uppercase">
-                      OFFICIAL HQ • CHENNAI
-                    </span>
-                  </div>
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">3D REALTIME</span>
-                </div>
               </div>
 
-              {/* Direct Contact Cards */}
-              <div className="space-y-4">
+              {/* Direct Contacts Heading */}
+              <div className="pt-2">
                 <h3
-                  className="text-white text-base sm:text-lg font-medium uppercase tracking-[0.2em]"
+                  className="text-white text-lg sm:text-xl font-bold uppercase tracking-[0.2em]"
                   style={{ fontFamily: "'Royal Tomato', sans-serif" }}
                 >
-                  {contactData.info.sectionTitle}
+                  DIRECT CONTACTS
                 </h3>
-
-                {/* Email */}
-                <div className="p-5 sm:p-6 bg-zinc-950 border border-zinc-900 rounded-2xl hover:border-red-500/50 transition-all duration-300 group">
-                  <span className="text-zinc-500 text-[10px] sm:text-xs tracking-widest font-black uppercase block">
-                    {contactData.info.email.label}
-                  </span>
-                  <a
-                    href={contactData.info.email.href}
-                    className="text-white group-hover:text-red-500 font-extrabold text-sm sm:text-base mt-1 block break-all transition-colors"
-                  >
-                    {contactData.info.email.value}
-                  </a>
-                </div>
-
-                {/* Phone */}
-                <div className="p-5 sm:p-6 bg-zinc-950 border border-zinc-900 rounded-2xl hover:border-red-500/50 transition-all duration-300 group">
-                  <span className="text-zinc-500 text-[10px] sm:text-xs tracking-widest font-black uppercase block">
-                    {contactData.info.phone.label}
-                  </span>
-                  <a
-                    href={contactData.info.phone.href}
-                    className="text-white group-hover:text-red-500 font-extrabold text-sm sm:text-base mt-1 block transition-colors"
-                  >
-                    {contactData.info.phone.value}
-                  </a>
-                </div>
-
-                {/* Base Location */}
-                <div className="p-5 sm:p-6 bg-zinc-950 border border-zinc-900 rounded-2xl">
-                  <span className="text-zinc-500 text-[10px] sm:text-xs tracking-widest font-black uppercase block">
-                    {contactData.info.location.label}
-                  </span>
-                  <p className="text-zinc-300 font-extrabold text-sm sm:text-base mt-1">
-                    {contactData.info.location.value}
-                  </p>
-                </div>
+                <p className="text-zinc-500 text-xs mt-1 font-mono tracking-wider">
+                  Connect with the team via direct communication channels.
+                </p>
               </div>
             </motion.div>
 
-            {/* Right Column: Premium Contact Form */}
+            {/* RIGHT SIDE — CONTACT INFORMATION (NO FORM, NO SUBMIT BUTTON) */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-7 bg-zinc-950/80 backdrop-blur-xl border border-zinc-800/80 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-6 shadow-2xl relative"
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="lg:col-span-7 bg-zinc-950/90 backdrop-blur-xl border border-zinc-800/80 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-6 shadow-2xl relative"
             >
-              <div className="space-y-2">
-                <h2
-                  className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight"
-                  style={{ fontFamily: "'Royal Tomato', sans-serif" }}
+              {/* Category 1: PARTNERSHIP & MEDIA INQUIRIES */}
+              <div className="p-6 sm:p-8 bg-zinc-900/50 border border-zinc-800/90 rounded-2xl hover:border-red-500/50 transition-all duration-300 group space-y-3">
+                <div className="flex items-center gap-2.5 text-red-500 mb-3">
+                  <Mail className="w-5 h-5" />
+                  <span className="text-xs sm:text-sm tracking-widest font-black uppercase text-zinc-400">
+                    PARTNERSHIP & MEDIA INQUIRIES
+                  </span>
+                </div>
+                <a
+                  href="mailto:gustoracingofficial@gmail.com"
+                  className="text-white hover:text-red-400 font-extrabold text-base sm:text-lg md:text-xl block break-all transition-colors inline-flex items-center gap-2"
                 >
-                  {contactData.form.title}
-                </h2>
-                <p className="text-zinc-400 text-xs sm:text-sm">
-                  {contactData.form.subtitle}
-                </p>
+                  gustoracingofficial@gmail.com
+                  <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-red-500" />
+                </a>
+                <a
+                  href="mailto:gustoracingindia@yahoo.com"
+                  className="text-white hover:text-red-400 font-extrabold text-base sm:text-lg md:text-xl block break-all transition-colors inline-flex items-center gap-2"
+                >
+                  gustoracingindia@yahoo.com
+                  <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-red-500" />
+                </a>
               </div>
 
-              {/* Success Banner */}
-              <AnimatePresence>
-                {submitted && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="bg-red-500/10 border border-red-500/40 rounded-2xl p-4 text-red-400 text-xs sm:text-sm font-medium flex items-center justify-between"
-                  >
-                    <span>{contactData.form.successMessage}</span>
-                    <button
-                      onClick={() => setSubmitted(false)}
-                      className="text-red-400 hover:text-white font-bold ml-2"
-                    >
-                      ✕
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              <form onSubmit={handleSubmit} className="space-y-5">
-                {/* Full Name */}
-                <div className="relative">
-                  <label
-                    htmlFor="contact-name"
-                    className={`block text-[10px] font-mono tracking-widest uppercase mb-1.5 transition-colors ${
-                      activeField === "name" ? "text-red-500" : "text-zinc-400"
-                    }`}
-                  >
-                    {contactData.form.fields.name} *
-                  </label>
-                  <input
-                    id="contact-name"
-                    type="text"
-                    value={formData.name}
-                    onFocus={() => setActiveField("name")}
-                    onBlur={() => setActiveField(null)}
-                    onChange={(e) => {
-                      setFormData({ ...formData, name: e.target.value });
-                      if (errors.name) setErrors({ ...errors, name: "" });
-                    }}
-                    placeholder="Enter your full name"
-                    className={`w-full min-h-[48px] bg-zinc-900/60 border ${
-                      errors.name ? "border-red-500" : activeField === "name" ? "border-red-500 ring-1 ring-red-500/50" : "border-zinc-800"
-                    } rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition duration-200`}
-                  />
-                  {errors.name && <p className="text-red-500 text-[10px] mt-1">{errors.name}</p>}
+              {/* Category 2: PHONE & WHATSAPP */}
+              <div className="p-6 sm:p-8 bg-zinc-900/50 border border-zinc-800/90 rounded-2xl hover:border-red-500/50 transition-all duration-300 group">
+                <div className="flex items-center gap-2.5 text-red-500 mb-3">
+                  <Phone className="w-5 h-5" />
+                  <span className="text-xs sm:text-sm tracking-widest font-black uppercase text-zinc-400">
+                    PHONE & WHATSAPP
+                  </span>
                 </div>
-
-                {/* Email Address */}
-                <div className="relative">
-                  <label
-                    htmlFor="contact-email"
-                    className={`block text-[10px] font-mono tracking-widest uppercase mb-1.5 transition-colors ${
-                      activeField === "email" ? "text-red-500" : "text-zinc-400"
-                    }`}
-                  >
-                    {contactData.form.fields.email} *
-                  </label>
-                  <input
-                    id="contact-email"
-                    type="email"
-                    value={formData.email}
-                    onFocus={() => setActiveField("email")}
-                    onBlur={() => setActiveField(null)}
-                    onChange={(e) => {
-                      setFormData({ ...formData, email: e.target.value });
-                      if (errors.email) setErrors({ ...errors, email: "" });
-                    }}
-                    placeholder="name@example.com"
-                    className={`w-full min-h-[48px] bg-zinc-900/60 border ${
-                      errors.email ? "border-red-500" : activeField === "email" ? "border-red-500 ring-1 ring-red-500/50" : "border-zinc-800"
-                    } rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition duration-200`}
-                  />
-                  {errors.email && <p className="text-red-500 text-[10px] mt-1">{errors.email}</p>}
-                </div>
-
-                {/* Subject */}
-                <div className="relative">
-                  <label
-                    htmlFor="contact-subject"
-                    className={`block text-[10px] font-mono tracking-widest uppercase mb-1.5 transition-colors ${
-                      activeField === "subject" ? "text-red-500" : "text-zinc-400"
-                    }`}
-                  >
-                    {contactData.form.fields.subject} *
-                  </label>
-                  <input
-                    id="contact-subject"
-                    type="text"
-                    value={formData.subject}
-                    onFocus={() => setActiveField("subject")}
-                    onBlur={() => setActiveField(null)}
-                    onChange={(e) => {
-                      setFormData({ ...formData, subject: e.target.value });
-                      if (errors.subject) setErrors({ ...errors, subject: "" });
-                    }}
-                    placeholder="Sponsorship, Media, General Inquiry"
-                    className={`w-full min-h-[48px] bg-zinc-900/60 border ${
-                      errors.subject ? "border-red-500" : activeField === "subject" ? "border-red-500 ring-1 ring-red-500/50" : "border-zinc-800"
-                    } rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition duration-200`}
-                  />
-                  {errors.subject && <p className="text-red-500 text-[10px] mt-1">{errors.subject}</p>}
-                </div>
-
-                {/* Message */}
-                <div className="relative">
-                  <label
-                    htmlFor="contact-message"
-                    className={`block text-[10px] font-mono tracking-widest uppercase mb-1.5 transition-colors ${
-                      activeField === "message" ? "text-red-500" : "text-zinc-400"
-                    }`}
-                  >
-                    {contactData.form.fields.message} *
-                  </label>
-                  <textarea
-                    id="contact-message"
-                    rows={5}
-                    value={formData.message}
-                    onFocus={() => setActiveField("message")}
-                    onBlur={() => setActiveField(null)}
-                    onChange={(e) => {
-                      setFormData({ ...formData, message: e.target.value });
-                      if (errors.message) setErrors({ ...errors, message: "" });
-                    }}
-                    placeholder="Tell us about your brand goals, partnership details, or press inquiry..."
-                    className={`w-full bg-zinc-900/60 border ${
-                      errors.message ? "border-red-500" : activeField === "message" ? "border-red-500 ring-1 ring-red-500/50" : "border-zinc-800"
-                    } rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition duration-200 resize-none`}
-                  />
-                  {errors.message && <p className="text-red-500 text-[10px] mt-1">{errors.message}</p>}
-                </div>
-
-                {/* Submit Button */}
-                <motion.button
-                  whileHover={{ scale: 1.01 }}
-                  whileTap={{ scale: 0.98 }}
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full min-h-[52px] py-4 bg-red-600 hover:bg-red-500 text-white font-extrabold rounded-xl transition duration-300 text-xs sm:text-sm tracking-widest uppercase cursor-pointer shadow-lg shadow-red-600/30 flex items-center justify-center gap-2"
+                
+                <a
+                  href="tel:+919884618876"
+                  className="text-white group-hover:text-red-400 font-extrabold text-xl sm:text-2xl md:text-3xl block transition-colors inline-flex items-center gap-2"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      TRANSMITTING...
-                    </>
-                  ) : (
-                    contactData.form.submitText
-                  )}
-                </motion.button>
-              </form>
+                  +91 98846 18876
+                  <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-red-500" />
+                </a>
+
+                <div className="mt-4 pt-4 border-t border-zinc-800/80">
+                  <a
+                    href="https://wa.me/919884618876"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:text-emerald-300 rounded-xl text-xs font-bold uppercase tracking-wider transition-all"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    Open WhatsApp Chat
+                  </a>
+                </div>
+              </div>
             </motion.div>
 
           </div>
@@ -382,3 +188,5 @@ export default function ContactPage() {
     </div>
   );
 }
+
+

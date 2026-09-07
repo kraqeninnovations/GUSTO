@@ -1,9 +1,9 @@
 {
   "items": [
-    { "href": "/results", "label": "Results" },
     { "href": "/about", "label": "About" },
-    { "href": "/gallery", "label": "Gallery" },
     { "href": "/partners", "label": "Partners" },
+    { "href": "/results", "label": "Results" },
+    { "href": "/gallery", "label": "Gallery" },
     { "href": "/contact", "label": "Contact" }
   ]
 }

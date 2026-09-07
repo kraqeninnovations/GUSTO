@@ -7,11 +7,7 @@
     },
     "subtitle": "From Chennai to the world's most demanding race circuits, Johann Emmanuel is one of India's fastest-rising motorcycle racers. Competing across Europe and Asia, he continues to push the limits of speed, precision, and performance.",
     "ctaPrimary": {
-      "text": "View Racing Career",
-      "href": "/results"
-    },
-    "ctaSecondary": {
-      "text": "Partner With Johaan",
+      "text": "Partner With Johann",
       "href": "/about#contact"
     }
   },
@@ -113,59 +109,15 @@
     "subtitle": "Follow Johann's 2026 ESBK championship journey across Spain and Portugal.",
     "rounds": [
       {
-        "round": "Round 1",
-        "date": "19–22 March",
-        "circuit": "Circuito de Jerez Ángel Nieto",
+        "round": "Round 7 (Finale)",
+        "date": "29 October – 01 November",
+        "circuit": "Circuito de Jerez Ángel Nieto II",
         "location": "Jerez de la Frontera",
         "country": "Spain",
         "countryFlag": "🇪🇸",
         "image": "/Calendar/jer.jpeg",
-        "alt": "Circuito de Jerez Ángel Nieto",
-        "status": "Complete"
-      },
-      {
-        "round": "Round 2",
-        "date": "07–10 May",
-        "circuit": "Circuito de Navarra",
-        "location": "Los Arcos",
-        "country": "Spain",
-        "countryFlag": "🇪🇸",
-        "image": "/Calendar/navarra.jpeg",
-        "alt": "Circuito de Navarra",
-        "status": "Complete"
-      },
-      {
-        "round": "Round 3",
-        "date": "18–21 June",
-        "circuit": "Circuito do Estoril",
-        "location": "Estoril",
-        "country": "Portugal",
-        "countryFlag": "🇵🇹",
-        "image": "/Calendar/estoril.jpeg",
-        "alt": "Circuito do Estoril",
-        "status": "Complete"
-      },
-      {
-        "round": "Round 4",
-        "date": "16–19 July",
-        "circuit": "MotorLand Aragón",
-        "location": "Alcañiz",
-        "country": "Spain",
-        "countryFlag": "🇪🇸",
-        "image": "/Calendar/moto.jpeg",
-        "alt": "MotorLand Aragón",
-        "status": "Complete"
-      },
-      {
-        "round": "Round 5",
-        "date": "10–13 September",
-        "circuit": "Circuit Ricardo Tormo",
-        "location": "Valencia",
-        "country": "Spain",
-        "countryFlag": "🇪🇸",
-        "image": "/Calendar/ric.jpeg",
-        "alt": "Circuit Ricardo Tormo",
-        "status": "Upcoming"
+        "alt": "Circuito de Jerez Ángel Nieto II",
+        "status": "Finale"
       },
       {
         "round": "Round 6",
@@ -179,15 +131,59 @@
         "status": "Upcoming"
       },
       {
-        "round": "Round 7 (Finale)",
-        "date": "29 October – 01 November",
-        "circuit": "Circuito de Jerez Ángel Nieto II",
+        "round": "Round 5",
+        "date": "10–13 September",
+        "circuit": "Circuit Ricardo Tormo",
+        "location": "Valencia",
+        "country": "Spain",
+        "countryFlag": "🇪🇸",
+        "image": "/Calendar/ric.jpeg",
+        "alt": "Circuit Ricardo Tormo",
+        "status": "Upcoming"
+      },
+      {
+        "round": "Round 4",
+        "date": "16–19 July",
+        "circuit": "MotorLand Aragón",
+        "location": "Alcañiz",
+        "country": "Spain",
+        "countryFlag": "🇪🇸",
+        "image": "/Calendar/moto.jpeg",
+        "alt": "MotorLand Aragón",
+        "status": "Completed"
+      },
+      {
+        "round": "Round 3",
+        "date": "18–21 June",
+        "circuit": "Circuito do Estoril",
+        "location": "Estoril",
+        "country": "Portugal",
+        "countryFlag": "🇵🇹",
+        "image": "/Calendar/estoril.jpeg",
+        "alt": "Circuito do Estoril",
+        "status": "Completed"
+      },
+      {
+        "round": "Round 2",
+        "date": "07–10 May",
+        "circuit": "Circuito de Navarra",
+        "location": "Los Arcos",
+        "country": "Spain",
+        "countryFlag": "🇪🇸",
+        "image": "/Calendar/navarra.jpeg",
+        "alt": "Circuito de Navarra",
+        "status": "Completed"
+      },
+      {
+        "round": "Round 1",
+        "date": "19–22 March",
+        "circuit": "Circuito de Jerez Ángel Nieto",
         "location": "Jerez de la Frontera",
         "country": "Spain",
         "countryFlag": "🇪🇸",
         "image": "/Calendar/jer.jpeg",
-        "alt": "Circuito de Jerez Ángel Nieto II",
-        "status": "Finale"
+        "alt": "Circuito de Jerez Ángel Nieto",
+        "status": "Completed"
       }
     ]
   },
@@ -200,12 +196,8 @@
     },
     "paragraph": "Every race is another chapter in Johann Emmanuel's pursuit of world-class excellence.From international championships to inspiring the next generation of Indian motorsport, the journey is only accelerating.",
     "ctaPrimary": {
-      "text": "Become a Partner",
-      "href": "/gallery"
-    },
-    "ctaSecondary": {
-      "text": "Latest Results",
-      "href": "/updates"
+      "text": "PARTNER WITH JOHANN",
+      "href": "/about#contact"
     },
     "backgroundImage": "/IMG_8541.JPG"
   }

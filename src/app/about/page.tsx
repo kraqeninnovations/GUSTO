@@ -256,21 +256,6 @@ export default function AboutPage() {
               <p className="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-xl">
                 {aboutData.hero.subtitle}
               </p>
-
-              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-3 sm:pt-4">
-                <a
-                  href={aboutData.hero.ctaPrimary.href}
-                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl transition duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-red-600/25 text-center text-[10px] sm:text-xs tracking-widest uppercase cursor-pointer"
-                >
-                  {aboutData.hero.ctaPrimary.text}
-                </a>
-                <a
-                  href={aboutData.hero.ctaSecondary.href}
-                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 font-extrabold rounded-xl transition duration-300 transform hover:scale-105 active:scale-95 border border-zinc-800 text-center text-[10px] sm:text-xs tracking-widest uppercase cursor-pointer"
-                >
-                  {aboutData.hero.ctaSecondary.text}
-                </a>
-              </div>
             </motion.div>
           </div>
         </div>
@@ -455,10 +440,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-start">
             {/* Contact Details Column */}
             <div className="md:col-span-5 space-y-4 sm:space-y-6">
-              <div className="p-6 bg-zinc-900/40 border border-zinc-900 rounded-2xl">
-                <span className="text-zinc-500 text-[10px] tracking-widest font-black uppercase block">{aboutData.contact.details.email.label}</span>
-                <a href={aboutData.contact.details.email.href} className="text-white hover:text-red-500 font-extrabold text-sm sm:text-base mt-1 block break-all">
-                  {aboutData.contact.details.email.value}
+              <div className="p-6 bg-zinc-900/40 border border-zinc-900 rounded-2xl space-y-2">
+                <span className="text-zinc-500 text-[10px] tracking-widest font-black uppercase block">EMAIL</span>
+                <a href="mailto:gustoracingofficial@gmail.com" className="text-white hover:text-red-500 font-extrabold text-sm sm:text-base block break-all">
+                  gustoracingofficial@gmail.com
+                </a>
+                <a href="mailto:gustoracingindia@yahoo.com" className="text-white hover:text-red-500 font-extrabold text-sm sm:text-base block break-all">
+                  gustoracingindia@yahoo.com
                 </a>
               </div>
 

@@ -137,15 +137,20 @@
     "sectionLabel": "CONNECT WITH US",
     "sectionTitle": "Get In Touch",
     "details": {
-      "email": {
-        "label": "EMAIL",
-        "value": "johannemmanuel.partnerships@gmail.com",
-        "href": "mailto:johannemmanuel.partnerships@gmail.com"
-      },
+      "emails": [
+        {
+          "value": "gustoracingofficial@gmail.com",
+          "href": "mailto:gustoracingofficial@gmail.com"
+        },
+        {
+          "value": "gustoracingindia@yahoo.com",
+          "href": "mailto:gustoracingindia@yahoo.com"
+        }
+      ],
       "phone": {
         "label": "PHONE",
-        "value": "+91 9840911406",
-        "href": "tel:+919840911406"
+        "value": "+91 98846 18876",
+        "href": "tel:+919884618876"
       },
       "instagram": {
         "label": "INSTAGRAM",

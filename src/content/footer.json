@@ -3,25 +3,25 @@
     "logo": "/johi-logo.png",
     "logoAlt": "Johann Emmanuel Racing Logo",
     "tagline": "Racing Towards The World Championship.",
-    "description": "Johann Emmanuel represents India on the international motorsport stage, competing across Europe and Asia with speed, precision, and relentless ambition."
+    "description": ""
   },
   "quickLinksTitle": "Quick Links",
   "quickLinks": [
-    {
-      "href": "/results",
-      "label": "Results"
-    },
     {
       "href": "/about",
       "label": "About"
     },
     {
-      "href": "/gallery",
-      "label": "Gallery"
-    },
-    {
       "href": "/partners",
       "label": "Partners"
+    },
+    {
+      "href": "/results",
+      "label": "Results"
+    },
+    {
+      "href": "/gallery",
+      "label": "Gallery"
     },
     {
       "href": "/contact",
@@ -30,19 +30,20 @@
   ],
   "contactTitle": "Contact Information",
   "contact": {
-    "email": {
-      "label": "Email",
-      "value": "johannemmanuel.partnerships@gmail.com",
-      "href": "mailto:johannemmanuel.partnerships@gmail.com"
-    },
+    "emails": [
+      {
+        "value": "gustoracingofficial@gmail.com",
+        "href": "mailto:gustoracingofficial@gmail.com"
+      },
+      {
+        "value": "gustoracingindia@yahoo.com",
+        "href": "mailto:gustoracingindia@yahoo.com"
+      }
+    ],
     "phone": {
       "label": "Phone",
-      "value": "+91 9840911406",
-      "href": "tel:+919840911406"
-    },
-    "location": {
-      "label": "Location",
-      "value": "Chennai, India"
+      "value": "+91 98846 18876",
+      "href": "tel:+919884618876"
     }
   },
   "socialTitle": "Follow Us",
@@ -69,6 +70,6 @@
     }
   ],
   "bottomBar": {
-    "copyright": "© 2026 Johann Emmanuel Racing. All Rights Reserved."
+    "copyright": "© 2026 Johann Emmanuel. All Rights Reserved."
   }
 }

@@ -17,8 +17,10 @@ interface EventItem {
   flag: string;
   date: string;
   image: string;
-  position: string;
-  points: string;
+  position?: string;
+  points?: string;
+  race1?: string;
+  race2?: string;
   type?: string;
 }
 
@@ -139,13 +141,27 @@ export default function ResultsPage() {
                         <span className="text-base">{event.flag}</span>
                         <span>{event.location}, {event.country}</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span className="bg-zinc-900 text-zinc-300 px-2 py-0.5 rounded text-[10px] font-extrabold uppercase border border-zinc-800">
-                          {event.position}
-                        </span>
-                        <span className="bg-red-500/10 border border-red-500/30 text-red-400 px-2 py-0.5 rounded text-[10px] font-extrabold uppercase">
-                          {event.points}
-                        </span>
+                      <div className="flex items-center gap-1.5 flex-wrap justify-end">
+                        {event.race1 && (
+                          <span className="bg-zinc-900 text-zinc-300 px-2 py-0.5 rounded text-[10px] font-extrabold uppercase border border-zinc-800">
+                            {event.race1}
+                          </span>
+                        )}
+                        {event.race2 && (
+                          <span className="bg-zinc-900 text-zinc-300 px-2 py-0.5 rounded text-[10px] font-extrabold uppercase border border-zinc-800">
+                            {event.race2}
+                          </span>
+                        )}
+                        {!event.race1 && !event.race2 && event.position && event.position !== "—" && (
+                          <span className="bg-zinc-900 text-zinc-300 px-2 py-0.5 rounded text-[10px] font-extrabold uppercase border border-zinc-800">
+                            {event.position}
+                          </span>
+                        )}
+                        {!event.race1 && !event.race2 && event.points && event.points !== "0 PTS" && (
+                          <span className="bg-red-500/10 border border-red-500/30 text-red-400 px-2 py-0.5 rounded text-[10px] font-extrabold uppercase">
+                            {event.points}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -187,26 +203,6 @@ export default function ResultsPage() {
           </motion.div>
         </section>
 
-        {/* 3. Previous Results Section */}
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl pt-16 sm:pt-20">
-          <div className="text-center p-8 sm:p-12 bg-zinc-950 border border-zinc-900 rounded-3xl space-y-4 shadow-xl">
-            <h3
-              className="text-white text-xl sm:text-2xl font-black uppercase tracking-tight"
-              style={{ fontFamily: "'Royal Tomato', sans-serif" }}
-            >
-              ARCHIVED CHAMPIONSHIP SEASONS
-            </h3>
-            <p className="text-zinc-400 text-xs sm:text-sm max-w-md mx-auto">
-              {resultsData.previousResults.paragraph}
-            </p>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-extrabold rounded-xl transition duration-300 text-xs tracking-widest uppercase shadow-lg shadow-red-600/30 active:scale-98"
-            >
-              {resultsData.previousResults.buttonText}
-            </a>
-          </div>
-        </section>
       </main>
 
       <Footer />

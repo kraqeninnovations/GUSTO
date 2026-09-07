@@ -323,31 +323,15 @@ export default function Home() {
                 
               </motion.div>
 
-              {/* Buttons */}
-              <motion.div
-                variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-3 sm:pt-4"
-              >
-                <motion.div
-                  whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
-                  whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
-                  className="w-full sm:w-auto"
+              {/* Single CTA Button */}
+              <div className="flex justify-center sm:justify-start pt-3 sm:pt-4">
+                <Link
+                  href="/about#contact"
+                  className="px-8 sm:px-10 py-3.5 sm:py-4 bg-red-600 hover:bg-red-500 text-white font-extrabold rounded-xl transition duration-300 transform hover:scale-105 active:scale-95 text-center shadow-lg shadow-red-600/30 cursor-pointer block text-xs tracking-widest uppercase"
                 >
-                  <Link href={homeData.hero.ctaPrimary.href} className="px-6 sm:px-8 py-3 sm:py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition transform hover:scale-105 text-center shadow-lg shadow-red-600/25 cursor-pointer block text-[10px] sm:text-xs tracking-widest uppercase">
-                    {homeData.hero.ctaPrimary.text}
-                  </Link>
-                </motion.div>
-
-                <motion.div
-                  whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
-                  whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
-                  className="w-full sm:w-auto"
-                >
-                  <Link href={homeData.hero.ctaSecondary.href} className="px-6 sm:px-8 py-3 sm:py-4 border border-zinc-800 hover:border-white text-white font-bold rounded-xl bg-zinc-950/50 hover:bg-white hover:text-black transition transform hover:scale-105 text-center cursor-pointer block text-[10px] sm:text-xs tracking-widest uppercase">
-                    {homeData.hero.ctaSecondary.text}
-                  </Link>
-                </motion.div>
-              </motion.div>
+                  PARTNER WITH JOHANN
+                </Link>
+              </div>
             </motion.div>
 
             {/* Right Image Column */}
@@ -424,25 +408,12 @@ export default function Home() {
               whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
               className="w-full sm:w-auto"
             >
-              <a
-                href={homeData.bottomHero.ctaPrimary.href}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl transition duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-red-600/20 text-center block text-[10px] sm:text-xs tracking-widest uppercase"
+              <Link
+                href="/about#contact"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-red-600 hover:bg-red-500 text-white font-extrabold rounded-xl transition duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-red-600/20 text-center block text-xs tracking-widest uppercase cursor-pointer"
               >
-                {homeData.bottomHero.ctaPrimary.text}
-              </a>
-            </motion.div>
-
-            <motion.div
-              whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
-              whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
-              className="w-full sm:w-auto"
-            >
-              <a
-                href={homeData.bottomHero.ctaSecondary.href}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-extrabold rounded-xl transition duration-300 transform hover:scale-105 active:scale-95 border border-zinc-800 text-center block text-[10px] sm:text-xs tracking-widest uppercase"
-              >
-                {homeData.bottomHero.ctaSecondary.text}
-              </a>
+                PARTNER WITH JOHANN
+              </Link>
             </motion.div>
           </div>
         </div>
