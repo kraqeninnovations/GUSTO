@@ -322,16 +322,6 @@ export default function Home() {
               >
                 
               </motion.div>
-
-              {/* Single CTA Button */}
-              <div className="flex justify-center sm:justify-start pt-3 sm:pt-4">
-                <Link
-                  href="/about#contact"
-                  className="px-8 sm:px-10 py-3.5 sm:py-4 bg-red-600 hover:bg-red-500 text-white font-extrabold rounded-xl transition duration-300 transform hover:scale-105 active:scale-95 text-center shadow-lg shadow-red-600/30 cursor-pointer block text-xs tracking-widest uppercase"
-                >
-                  PARTNER WITH JOHANN
-                </Link>
-              </div>
             </motion.div>
 
             {/* Right Image Column */}
@@ -395,8 +385,8 @@ export default function Home() {
             {homeData.bottomHero.sectionLabel}
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-white mt-3 sm:mt-4 tracking-tighter uppercase drop-shadow-lg leading-none">
-            <Shuffle text={homeData.bottomHero.sectionTitle.line1} tag="span" className="block text-white" textAlign="center" duration={0.4} />
-            <Shuffle text={homeData.bottomHero.sectionTitle.line2} tag="span" className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400" textAlign="center" duration={0.4} />
+            <span className="block text-white">{homeData.bottomHero.sectionTitle.line1}</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">{homeData.bottomHero.sectionTitle.line2}</span>
           </h2>
           <p className="text-zinc-300 text-sm sm:text-base mt-4 sm:mt-6 max-w-2xl mx-auto leading-relaxed drop-shadow">
             {homeData.bottomHero.paragraph}

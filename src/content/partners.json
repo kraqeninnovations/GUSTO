@@ -20,6 +20,13 @@
         "description": "KYT Helmets are designed and developed in Italy and manufactured in Indonesia by PT Tara Citra Kusuma. The brand is known for combining premium safety, racing technology, and innovative helmet design trusted by professional riders worldwide."
       },
       {
+        "id": "gusto",
+        "name": "Gusto",
+        "logo": "/part/Gusto Racing india_indian flag.png",
+        "bgType": "black",
+        "description": "Gusto is an international racing partner supporting the pursuit of performance, precision, and excellence across the global motorsport stage. Their partnership represents a shared commitment to competitive racing and the journey towards higher levels of motorsport."
+      },
+      {
         "id": "voyage",
         "name": "VOYAGE EYEWEAR",
         "logo": "/part/image 89.png",
@@ -41,11 +48,11 @@
         "description": "Fettle is a premier performance and fitness brand dedicated to supporting elite athletes with specialized recovery, physical training, and endurance solutions."
       },
       {
-        "id": "motul",
-        "name": "MOTUL",
-        "logo": "/part/Motul_logo 1.png",
+        "id": "redhills-ktm",
+        "name": "Redhills KTM",
+        "logo": "/part/Group 1.png",
         "bgType": "black",
-        "description": "Motul is a world-renowned French lubricant brand specializing in high-performance synthetic engine oils and race-proven fluids for competitive motorsports."
+        "description": "Redhills KTM represents a strong connection to KTM racing and the motorcycle racing community. Their support contributes to Johann's continued development, performance, and progression through competitive motorsport."
       },
       {
         "id": "ogio",
@@ -53,13 +60,6 @@
         "logo": "/part/OGIO.png",
         "bgType": "black",
         "description": "OGIO designs and manufactures premium, heavy-duty gear bags, backpacks, and travel luggage engineered specifically for powersports and action sports athletes."
-      },
-      {
-        "id": "rcb",
-        "name": "RCB",
-        "logo": "/part/RCB.png",
-        "bgType": "black",
-        "description": "RCB (Racing Boy) is a premier manufacturer of high-performance motorcycle racing parts, braking systems, and aftermarket components trusted across international racing series."
       },
       {
         "id": "spnracing",

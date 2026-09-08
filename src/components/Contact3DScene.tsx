@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, Suspense } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useGLTF, Float, Center, Environment } from "@react-three/drei";
+import { useGLTF, Float, Center } from "@react-three/drei";
 import * as THREE from "three";
 
 function CustomModel() {
@@ -122,7 +122,6 @@ export default function Contact3DScene() {
         <directionalLight position={[0, -10, 10]} intensity={0.8} color="#ffffff" />
 
         <Suspense fallback={null}>
-          <Environment preset="studio" />
           <CustomModel />
         </Suspense>
       </Canvas>

@@ -85,11 +85,6 @@ export default function GalleryPage() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2.5 sm:p-3">
-                  <span className="text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-wider truncate">
-                    {img.title}
-                  </span>
-                </div>
               </motion.div>
             ))}
           </motion.div>
