@@ -93,16 +93,16 @@
       "image": "/result/IMG_4051.JPG",
       "championship": "ESBK 2026",
       "championshipLogoText": "ESBK",
-      "result": "UPCOMING",
-      "position": "—",
-      "points": "0 PTS",
-      "badge": "🕒 Upcoming",
-      "status": "upcoming",
+     "result": "COMPLETE",
+      "race1": "Race 1 — P5",
+      "race2": "Race 2 — P5",
+      "badge": "✅ Complete",
+      "status": "complete",
       "categories": [
         { "name": "Free Practice", "link": "#" },
         { "name": "Qualifying", "link": "#", "hasLaptime": true },
-        { "name": "Race 1", "link": "#", "hasLaptime": true },
-        { "name": "Race 2", "link": "#", "hasLaptime": true }
+        { "name": "Race 1 — P5", "link": "#", "hasLaptime": true },
+        { "name": "Race 2 — P5", "link": "#", "hasLaptime": true }
       ]
     },
     {
@@ -129,30 +129,7 @@
         { "name": "Race 2", "link": "#", "hasLaptime": true }
       ]
     },
-    {
-      "id": "round-6",
-      "round": "ROUND 6 (FINALE)",
-      "title": "Circuito de Jerez Ángel Nieto II",
-      "circuit": "Circuito de Jerez Ángel Nieto II",
-      "location": "Jerez de la Frontera",
-      "country": "Spain",
-      "flag": "🇪🇸",
-      "date": "29 October – 01 November",
-      "image": "/result/IMG_3549.JPG",
-      "championship": "ESBK 2026",
-      "championshipLogoText": "ESBK",
-      "result": "FINALE",
-      "position": "—",
-      "points": "0 PTS",
-      "badge": "🏆 Finale",
-      "status": "finale",
-      "categories": [
-        { "name": "Free Practice", "link": "#" },
-        { "name": "Qualifying", "link": "#", "hasLaptime": true },
-        { "name": "Race 1", "link": "#", "hasLaptime": true },
-        { "name": "Race 2", "link": "#", "hasLaptime": true }
-      ]
-    },
+    
     {
       "id": "coming-soon",
       "type": "placeholder",

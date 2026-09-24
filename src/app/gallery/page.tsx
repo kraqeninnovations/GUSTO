@@ -79,7 +79,7 @@ export default function GalleryPage() {
               >
                 <Image
                   src={img.image}
-                  alt={img.title}
+                  alt={`Johann Emmanuel Gallery Photo ${img.id}`}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1280px) 25vw, 20vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -168,16 +168,14 @@ export default function GalleryPage() {
                 <div className="relative w-full h-[65vh] sm:h-[75vh] flex items-center justify-center">
                   <Image
                     src={images[lightboxIndex].image}
-                    alt={images[lightboxIndex].title}
+                    alt={`Johann Emmanuel Gallery Photo ${images[lightboxIndex].id}`}
                     fill
                     className="object-contain rounded-lg max-w-full max-h-full"
                     priority
                     sizes="100vw"
                   />
                 </div>
-                <div className="mt-3 sm:mt-4 bg-zinc-900/90 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest border border-zinc-700 flex items-center gap-2 sm:gap-3 max-w-[90vw] truncate shadow-lg">
-                  <span className="truncate">{images[lightboxIndex].title}</span>
-                  <span className="text-zinc-500 shrink-0">•</span>
+                <div className="mt-3 sm:mt-4 bg-zinc-900/90 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest border border-zinc-700 flex items-center gap-2 sm:gap-3 shadow-lg">
                   <span className="text-red-500 font-mono shrink-0">
                     {lightboxIndex + 1} / {images.length}
                   </span>

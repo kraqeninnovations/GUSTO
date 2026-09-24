@@ -17,22 +17,24 @@
     "subTitle": "Not every racing career begins on the podium.\nJohann's journey started in Chennai and evolved into international competition across Europe, Asia, and the Middle East. Every championship, every setback, and every victory has shaped the rider he is today.",
     "items": [
       {
-        "year": "2019",
-        "title": "Career Begins",
-        "description": "Johann's journey started in grassroots Indian motorcycle racing, taking his first steps on the circuit in Chennai and setting the foundation for high-level international competition.",
-        "image": "/car.jpeg"
+        "title": "ESBK HISTORY",
+        "description": "First Indian to score ESBK points.\nA new chapter in European competition.",
+        "image": "/career/Esbk points.jpeg"
       },
       {
-        "year": "2024",
-        "title": "Historic Qatar Hat-trick",
-        "description": "Dominating the international stage with a clean sweep at Lusail International Circuit in Qatar, proving speed and composure against seasoned world contenders.",
-        "image": "/qu.jpeg"
+        "title": "KTM CUP CHAMPION",
+        "description": "KTM Cup Pro Champion.\nAnother title added to the journey towards the world stage.",
+        "image": "/career/KTM champion.jpeg"
       },
       {
-        "year": "2026",
-        "title": "KTM Cup Champion",
-        "description": "Sealing the championship title with unmatched pace, tactical brilliance, and lap records across Europe and Asia as the journey accelerates towards the World Championship.",
-        "image": "/ktm.jpeg"
+        "title": "QSTK 600 CHAMPION",
+        "description": "First Indian to win the Qatar Superstock 600 Championship.\n6 wins • 10 races • Debut 600cc season",
+        "image": "/career/Qatar champion.jpeg"
+      },
+      {
+        "title": "QATAR HAT-TRICK",
+        "description": "Three races. Three wins.\nThe first Indian to achieve a clean sweep in QSSP 300 at Lusail.",
+        "image": "/career/Qatar Hatrick.jpeg"
       }
     ]
   },

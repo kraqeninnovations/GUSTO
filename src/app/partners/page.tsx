@@ -211,19 +211,24 @@ export default function PartnersPage() {
             ))}
           </div>
 
-          {/* Mobile Only (< 768px): 3-Column Circular Logo Grid */}
+          {/* Mobile Only (< 768px): 2-Column Sponsor Grid with Logo & Brand Name Below */}
           <div className="md:hidden">
             <p className="text-center text-sm font-medium text-zinc-500 mb-6 tracking-wide">
               Tap any partner logo to view more details.
             </p>
-            <div className="grid grid-cols-3 gap-4 sm:gap-6 justify-items-center items-center max-w-sm mx-auto">
+            <div className="grid grid-cols-2 gap-y-7 gap-x-4 sm:gap-8 justify-items-center items-start max-w-[340px] xs:max-w-[380px] sm:max-w-md mx-auto px-2">
               {partnersData.brandPartners.items.map((brand: BrandPartnerItem) => (
                 <div
                   key={brand.id}
                   onClick={() => setSelectedPartner(brand)}
-                  className="w-22 h-22 xs:w-24 xs:h-24 sm:w-28 sm:h-28 rounded-full bg-zinc-950 border border-zinc-800/90 shadow-xl flex items-center justify-center p-3 cursor-pointer active:scale-90 hover:border-red-600/60 transition-all duration-200 aspect-square group overflow-hidden"
+                  className="flex flex-col items-center cursor-pointer group w-full"
                 >
-                  <MobileCircularLogo brand={brand} />
+                  <div className="w-24 h-24 xs:w-28 xs:h-28 sm:w-32 sm:h-32 rounded-full bg-zinc-950 border border-zinc-800/90 shadow-xl flex items-center justify-center p-3 xs:p-4 active:scale-90 group-hover:border-red-600/60 transition-all duration-200 aspect-square overflow-hidden mb-2.5">
+                    <MobileCircularLogo brand={brand} />
+                  </div>
+                  <span className="text-[11px] xs:text-xs sm:text-sm font-bold tracking-wider uppercase text-center text-zinc-200 group-hover:text-red-500 transition-colors leading-tight px-1 max-w-[140px]">
+                    {brand.name}
+                  </span>
                 </div>
               ))}
             </div>

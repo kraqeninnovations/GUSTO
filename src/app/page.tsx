@@ -13,7 +13,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import homeData from "../content/home.json";
 
 interface Champion {
-  year: string;
+  year?: string;
   title: string;
   image: string;
 }
